@@ -28,8 +28,7 @@ def main():
     bias = tf.Variable(tf.zeros([10]))
 
     # Initialize all variables.
-    sess.run(tf.initialize_all_variables())
-    # sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())
 
     # Simple regression model where the output is a weighted combination of the input +bias.
     output = tf.matmul(input_placeholder, layer1_wts) + bias
